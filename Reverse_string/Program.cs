@@ -5,31 +5,32 @@ class Program
     static void Main(string[] args)
     {
         List<char> entry_value = new List<char>();
-        List<char> reverse_char = new List<char>();
-        List<string> reverse_value = new List<string>();
         
-        entry_value.Add('a');
+        //entry_value.Add('a');
         
         Console.WriteLine("Please enter a string: ");
         string input = Console.ReadLine();
+        string reverse_string = "";
 
         int cnt = input.Length;
+        //Console.WriteLine(input[0]);
+        //Console.WriteLine($"The total length is {cnt}");
 
-        foreach (char c in input)
+        for (int i = cnt-1; i >=0 ; i--)
         {
-            entry_value.Add(c);
-        }
-        Console.WriteLine($"The total length of the string is {cnt}");
-        
-        //entry_value = input.ToList('');
-        
-        reverse_char =  entry_value.Reverse();
-        reverse_value = reverse_char.ToList();
+            reverse_string += (input[i]);
+            //entry_value.Add(input[i]);
             
-        //Console.WriteLine($"The final string is {entry_value[0]}, and the reversed string is {entry_value[entry_value.Count - 1]}");
+        }
 
-        //entry_value.Add(input);
-
+        string.Join(System.Environment.NewLine, reverse_string);
+        string final = string.Join(System.Environment.NewLine, entry_value);
+            
+        
+        Console.WriteLine($"The reverse of the string is {reverse_string}, {final}");
+        
+        
+        
 
 
     }
