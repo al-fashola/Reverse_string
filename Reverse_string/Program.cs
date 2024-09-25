@@ -4,34 +4,36 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<char> entry_value = new List<char>();
-        
-        //entry_value.Add('a');
-        
+        //entry message and declare entry variable  
         Console.WriteLine("Please enter a string: ");
         string input = Console.ReadLine();
-        string reverse_string = "";
-
+        input = input.ToLower();
+        
+        
+        //Declare variables to use for length and reverse value 
+        //string reverse_string = "";
         int cnt = input.Length;
-        //Console.WriteLine(input[0]);
-        //Console.WriteLine($"The total length is {cnt}");
+        List<char> entry_value = new List<char>();
+        
 
         for (int i = cnt-1; i >=0 ; i--)
         {
-            reverse_string += (input[i]);
-            //entry_value.Add(input[i]);
+            //reverse_string += (input[i]);
+            entry_value.Add(input[i]);
             
         }
 
-        string.Join(System.Environment.NewLine, reverse_string);
-        string final = string.Join(System.Environment.NewLine, entry_value);
-            
-        
-        Console.WriteLine($"The reverse of the string is {reverse_string}, {final}");
-        
-        
-        
+        //string.Join(System.Environment.NewLine, reverse_string);
+        string final = string.Join("", entry_value);
 
-
+        if (final == input)
+        {
+            Console.WriteLine("This string is a Palindrome!");
+        }
+        else
+        {
+            Console.WriteLine($"The reverse of the string is {final}, which is not a Palindrome!");
+        }
+        
     }
 }
