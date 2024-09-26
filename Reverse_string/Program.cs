@@ -12,12 +12,10 @@ class Program
         
         //Declare variables to use for length and reverse value 
         //string reverse_string = "";
-        int lengthcount = input.Length-1;
+        int lengthcount = input.Length;
         List<char> entryvalue = new List<char>();
-        
-        
 
-        for (int i = 0; i <= lengthcount; i++)
+        for (int i = 1; i <= lengthcount; i++)
         {
             //reverse_string += (input[i]);
             
