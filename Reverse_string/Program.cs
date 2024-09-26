@@ -7,27 +7,27 @@ class Program
         //entry message and declare entry variable  
         Console.WriteLine("Please enter a string: ");
         string input = Console.ReadLine();
-        input = input.ToLower();
+        string originalString = input.ToLower();
         
         
         //Declare variables to use for length and reverse value 
         //string reverse_string = "";
-        int lengthcount = input.Length;
-        List<string> entryvalue = new List<string>();
+        int count = originalString.Length;
+        List<string> entry = new List<string>();
 
-        for (int i = 1; i <= lengthcount; i++)
+        for (int i = 1; i <= count; i++)
         {
             //reverse_string += (input[i]);
-            entryvalue.Add(input[lengthcount-i].ToString());
+            entry.Add(originalString[count-i].ToString());
             
         }
 
         //string.Join(System.Environment.NewLine, reverse_string);
-        string final = string.Join("", entryvalue);
+        string final = string.Join("", entry);
 
-        if (final == input)
+        if (final == originalString)
         {
-            Console.WriteLine("This string is a Palindrome!");
+            Console.WriteLine($"This string '{input}' is a Palindrome!");
         }
         else
         {
