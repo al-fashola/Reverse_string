@@ -13,13 +13,12 @@ class Program
         //Declare variables to use for length and reverse value 
         //string reverse_string = "";
         int lengthcount = input.Length;
-        List<char> entryvalue = new List<char>();
+        List<string> entryvalue = new List<string>();
 
         for (int i = 1; i <= lengthcount; i++)
         {
             //reverse_string += (input[i]);
-            
-            entryvalue.Add(input[lengthcount-i]);
+            entryvalue.Add(input[lengthcount-i].ToString());
             
         }
 
