@@ -17,7 +17,7 @@ class Program
 
         for (int i = 1; i <= count; i++)
         {
-            reverseString += (input[count-i]).ToString();
+            reverseString += (input[count-i]);
             //entry.Add(originalString[count-i].ToString());
             
         }
