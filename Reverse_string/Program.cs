@@ -11,19 +11,20 @@ class Program
         
         
         //Declare variables to use for length and reverse value 
-        //string reverse_string = "";
+        string reverseString = "";
         int count = originalString.Length;
-        List<string> entry = new List<string>();
+        //List<string> entry = new List<string>();
 
         for (int i = 1; i <= count; i++)
         {
-            //reverse_string += (input[i]);
-            entry.Add(originalString[count-i].ToString());
+            reverseString += (input[count-i]).ToString();
+            //entry.Add(originalString[count-i].ToString());
             
         }
 
         //string.Join(System.Environment.NewLine, reverse_string);
-        string final = string.Join("", entry);
+        //string final = string.Join("", reverseString);
+        string final = reverseString;
 
         if (final == originalString)
         {
